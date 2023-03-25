@@ -100,7 +100,7 @@ A continuación utilizar los archivos que vienen en la carpeta doc del proyecto 
 
 Ejecutar Script query_auth_server.sql para crear las credenciales y roles del AuhtServer en la consola H2.
 
-Ahora usamos la coleccioacute;n Postman AuthServerUser, para solicitar token.
+Ahora usamos la colección Postman AuthServerUser, para solicitar token.
 
 Una vez solicitado el token, usar para consumir los recursos del API User.
 
