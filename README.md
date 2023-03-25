@@ -3,9 +3,9 @@
 
 ******
 
-## Introducci&oacute;n
+## Introducción
 
-Este desarrollo es un API Rest que permite realizar un CRUD de usuarios, esta implementado con tecnologi&oacute;a Spring Boot 2.6.6, Maven, Java 1.8, Swagger UI, Authentication OAuth2 Token
+Este desarrollo es un API Rest que permite realizar un CRUD de usuarios, esta implementado con tecnología Spring Boot 2.6.6, Maven, Java 1.8, Swagger UI, Authentication OAuth2 Token
 para acceder a los recursos del API y BD embebida H2.
 
 Una vez clonado el proyecto usuario API User, ejecutar y acceder a la url:
@@ -89,13 +89,16 @@ localhost:9028/h2-console/
 Configurar:
 
 Driver Class: org.hsqldb.jdbcDriver
+
 JDBC URL: jdbc:hsqldb:mem:testdb
+
 User Name: sa
+
 Password:
 
-A continuacioacute;n utilizar los archivos que vienen en la carpeta doc del proyecto usuario API User.
+A continuación utilizar los archivos que vienen en la carpeta doc del proyecto usuario API User.
 
-Ejecutar Script query_auth_server.sql para crear las credenciales y roles del AuhtServer en la consola H2
+Ejecutar Script query_auth_server.sql para crear las credenciales y roles del AuhtServer en la consola H2.
 
 Ahora usamos la coleccioacute;n Postman AuthServerUser, para solicitar token.
 
