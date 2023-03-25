@@ -1,0 +1,66 @@
+spring:
+    application:
+        name: Prueba Tecnica User - BCI
+        
+    mvc:
+        pathmatch:
+            matching-strategy: ANT_PATH_MATCHER
+            
+        log-request-details: true
+            
+    h2:
+       console:
+            enabled: true
+
+    datasource:
+        driver-class-name: org.h2.Driver
+        url: jdbc:h2:mem:userdb
+        username: user
+        password: pass
+        hikari:
+            maximum-pool-size: 1
+
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        
+    #sql:
+     # init:
+      #  data-locations: classpath:queryuser.sql
+
+    #security:
+        #user:
+           #name: user
+           #password: bcitest
+
+logging:
+    level:
+       org:
+         springframework:
+            web: 
+              filter:
+                CommonsRequestLoggingFilter: DEBUG
+         hibernate: ERROR
+         
+#config spring secutiry
+security:
+   oauth2:
+     resource:
+        token-info-uri: http://localhost:9028/oauth/check_token
+        prefer-token-info: true
+     client:
+        client-id: dd0881b3ead6a3f53e099d2d1d60706f
+        client-secret: ae378609276f70b6e7bfabd3a681089e
+
+server:
+    port: 8080
+
+springdoc:
+    swagger-ui:
+        operations-sorter: alpha
+        tags-sorter: alpha
+    paths-to-exclude: /error
+    
+user:
+    email: ^([0-9a-zA-Z]+[-._+&])*[0-9a-zA-Z]+@([-0-9a-zA-Z]+[.])+[a-zA-Z]{2,6}$
+    
+    pass: ^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()]).{8,10}$

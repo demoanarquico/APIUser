@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "d1a84016-615d-4ec3-bdb0-3754a78c9286",
+		"name": "AuthServer User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9028/oauth/token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ae378609276f70b6e7bfabd3a681089e",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "dd0881b3ead6a3f53e099d2d1d60706f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "uadmin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "59b60143f23f9cb38abdeaa8419624b8",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9028/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9028",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9028/oauth/check_token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ae378609276f70b6e7bfabd3a681089e",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "dd0881b3ead6a3f53e099d2d1d60706f",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "token",
+							"value": "8950ed57-245a-480f-ac80-4a26f5e0d218",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9028/oauth/check_token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9028",
+					"path": [
+						"oauth",
+						"check_token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
